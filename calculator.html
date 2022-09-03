@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+    <script>
+        function StoreData(v){
+            var addata=document.getElementById('display').value;
+            document.getElementById('display').value=addata+v;
+        }
+        function calc2(){
+            var t=document.getElementById('display').value;
+            var final=eval(t)
+            document.getElementById('display').value=final;
+        }
+        function DataClear(){
+            document.getElementById('display').value=" ";
+        }
+    </script>
+<style>
+    .calculator{
+        marging:auto;
+        text-align: center;
+        height: 450px;
+        width: 300px;
+    }
+    #display{
+        width: 230px;
+        height: 60px;
+        text-align: right;
+        padding-right: 10px;
+        font-size: 25px;
+        background-color: rgb(0, 255, 106);
+        color: white;
+        border-radius: 10px 5px;
+
+    }
+    .btn{
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        font-size: 15px;
+        margin: 3px;
+        background-color: rgb(0, 255, 106);
+        color: white;
+        border-radius: 10px 5px;
+    }
+    .btn1{
+        width: 105px;
+        height: 50px;
+        margin: 6px;
+        background-color: rgb(0, 255, 106);
+        color: white;
+        border-radius: 10px 5px;
+    }
+    .btn2{
+        width: 165px;
+        height: 50px;
+        margin: 6px;
+        background-color: rgb(0, 255, 106);
+        color: white;
+        border-radius: 10px 5px;
+    }
+</style>
+<body>
+<div class="calculator">
+    <input type="text" id="display" placeholder="calculator"><br>
+
+    <input type="button" class="btn1"value="C" onclick="DataClear('')">
+    <input type="button" class="btn" value="%" onclick="StoreData('%')">
+    <input type="button" class="btn" value="/" onclick="StoreData('/')"><br>
+    <input type="button" class="btn" value="7" onclick="StoreData('7')">
+    <input type="button" class="btn" value="8" onclick="StoreData('8')">
+    <input type="button" class="btn" value="9" onclick="StoreData('9')">
+    <input type="button" class="btn" value="X" onclick="StoreData('*')"><br>
+    <input type="button" class="btn" value="4" onclick="StoreData('4')">
+    <input type="button" class="btn" value="5" onclick="StoreData('5')">
+    <input type="button" class="btn" value="6" onclick="StoreData('6')">
+    <input type="button" class="btn" value="-" onclick="StoreData('-')"><br>
+    <input type="button" class="btn" value="1" onclick="StoreData('1')">
+    <input type="button" class="btn" value="2" onclick="StoreData('2')">
+    <input type="button" class="btn" value="3" onclick="StoreData('3')">
+    <input type="button" class="btn" value="+" onclick="StoreData('+')"><br>
+    <input type="button" class="btn" value="0" onclick="StoreData('0')">
+    <input type="button" class="btn2"value="=" onclick="calc2()">
+    </form>
+</div>
+</body>
+</html>
